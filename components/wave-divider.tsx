@@ -14,13 +14,16 @@ export function WaveDivider({ className, flip, fill }: WaveDividerProps) {
   return (
     <div
       aria-hidden="true"
-      className={cn('pointer-events-none relative h-24 w-full overflow-hidden', className)}
+      className={cn(
+        'pointer-events-none relative h-20 w-full overflow-hidden',
+        className,
+      )}
       style={{ transform: flip ? 'rotate(180deg)' : undefined }}
     >
       {[
-        { opacity: 0.35, duration: '20s', y: 6 },
-        { opacity: 0.5, duration: '14s', y: 2 },
-        { opacity: 1, duration: '10s', y: 0 },
+        { opacity: 0.3, duration: '22s', y: 4 },
+        { opacity: 0.5, duration: '16s', y: 1 },
+        { opacity: 1, duration: '11s', y: 0 },
       ].map((layer, i) => (
         <svg
           key={i}
